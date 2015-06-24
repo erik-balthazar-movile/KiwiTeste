@@ -5,11 +5,11 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{1376A968-4236-8737-4185-AAF870B15E2C}</ProjectGuid>
+	<ProjectGuid>{9F1C3A1D-257F-0C53-2136-2F946F6021BD}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
-	<AssemblyName>Assembly-CSharp-firstpass</AssemblyName>
+	<AssemblyName>Assembly-CSharp</AssemblyName>
 	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
 	<FileAlignment>512</FileAlignment>
 	<BaseDirectory>Assets</BaseDirectory>
@@ -46,8 +46,9 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Plugins\com\SubscripitionScripts\Subscription.cs" />
-     <Compile Include="Assets\Plugins\com\SubscripitionScripts\SubscriptionManager.cs" />
+     <Compile Include="Assets\SubscripitionScripts\OurSubscriptionController.cs" />
+     <Compile Include="Assets\SubscripitionScripts\Subscription.cs" />
+     <Compile Include="Assets\SubscripitionScripts\SubscriptionManager.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

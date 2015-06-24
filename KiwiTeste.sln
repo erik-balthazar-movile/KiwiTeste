@@ -1,7 +1,7 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2008
 
-Project("{D53C5C34-9470-D8E2-6542-1DBB61266651}") = "KiwiTeste", "Assembly-CSharp-firstpass.csproj", "{1376A968-4236-8737-4185-AAF870B15E2C}"
+Project("{D53C5C34-9470-D8E2-6542-1DBB61266651}") = "KiwiTeste", "Assembly-CSharp.csproj", "{9F1C3A1D-257F-0C53-2136-2F946F6021BD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,15 +9,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{1376A968-4236-8737-4185-AAF870B15E2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1376A968-4236-8737-4185-AAF870B15E2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1376A968-4236-8737-4185-AAF870B15E2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1376A968-4236-8737-4185-AAF870B15E2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F1C3A1D-257F-0C53-2136-2F946F6021BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F1C3A1D-257F-0C53-2136-2F946F6021BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F1C3A1D-257F-0C53-2136-2F946F6021BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F1C3A1D-257F-0C53-2136-2F946F6021BD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-		GlobalSection(MonoDevelopProperties) = preSolution
+						GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1
