@@ -8,8 +8,7 @@ public class OurSubscriptionController : MonoBehaviour {
 	static string trimestral = "com.movile.android.oikids.trimestral";
 
 	// Use this for initialization
-	IEnumerator Start () {
-		yield return new WaitForSeconds(10);
+	void Start () {
 		Debug.Log ("TESTE - Subscription inicio");
 		AtualizaTexto("TESTE - Subscription \ninicio");
 		Subscription.InitWithApplicationId("");
