@@ -10,19 +10,19 @@ public class OurSubscriptionController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		Debug.Log ("TESTE - Subscription inicio");
-		AtualizaTexto("TESTE - Subscription \ninicio");
+		AtualizaTexto("TESTE - Subscription inicio");
 		Subscription.InitWithApplicationId("");
 
 		Debug.Log ("TESTE - Subscription inicializado");
-		AtualizaTexto("TESTE - Subscription \ninicializado");
+		AtualizaTexto("TESTE - Subscription inicializado");
 		Subscription.UpdateAllSubscriptions ();
 
 		Debug.Log ("TESTE - Subscription atualizado");
-		AtualizaTexto("TESTE - Subscription \natualizado");
+		AtualizaTexto("TESTE - Subscription atualizado");
 		bool subscribed = Subscription.CheckActiveKiwiSubscription (trimestral);
 
 		Debug.Log ("TESTE - Subscription fim: "+subscribed);
-		AtualizaTexto("TESTE - Subscription \nfim: "+subscribed);
+		AtualizaTexto("TESTE - Subscription fim: "+subscribed);
 	}
 
 	void AtualizaTexto(string texto){
