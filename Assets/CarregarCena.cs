@@ -5,8 +5,7 @@ public class CarregarCena : MonoBehaviour {
 
 	public string nomeCena;
 
-	void OnMouseUp() {
+	public void LoadScene() {
 		Application.LoadLevel(nomeCena);
-		print ("asdsadsasd");
 	}
 }
