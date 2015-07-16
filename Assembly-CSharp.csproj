@@ -48,7 +48,6 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\CarregarCena.cs" />
      <Compile Include="Assets\Scripts\ClickPluginAndroid.cs" />
-     <Compile Include="Assets\Scripts\TestPlugin.cs" />
      <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity 4.6.5/Unity.app/Contents/UnityExtensions/Unity/GUISystem/4.6.5/UnityEngine.UI.dll</HintPath>
