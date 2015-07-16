@@ -43,7 +43,7 @@
 -define:UNITY_EDITOR_OSX
 -define:UNITY_TEAM_LICENSE
 -define:UNITY_PRO_LICENSE
-'Assets/CarregarCena.cs'
+'Assets/Scripts/CarregarCena.cs'
 'Assets/Scripts/TestPlugin.cs'
 -r:'/Applications/Unity_4.6.5/Unity.app/Contents/Frameworks/Mono/lib/mono/unity/System.Runtime.Serialization.dll'
 -r:'/Applications/Unity_4.6.5/Unity.app/Contents/Frameworks/Mono/lib/mono/unity/System.Xml.Linq.dll'

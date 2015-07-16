@@ -46,7 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\CarregarCena.cs" />
+     <Compile Include="Assets\Scripts\CarregarCena.cs" />
      <Compile Include="Assets\Scripts\TestPlugin.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity_4.6.5/Unity.app/Contents/UnityExtensions/Unity/GUISystem/4.6.5/UnityEngine.UI.dll</HintPath>
