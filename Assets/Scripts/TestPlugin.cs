@@ -18,7 +18,7 @@ public class TestPlugin : MonoBehaviour {
 		return str;
 	}
 
-	void Start(){
+	public void GetHelloWorld(){
 		gameObject.GetComponent<Text>().text = HelloWorld();
 	}
 }
