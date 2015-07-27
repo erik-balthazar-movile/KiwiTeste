@@ -8,7 +8,7 @@ public class TestPlugin : MonoBehaviour {
 	[DllImport ("__Internal")]
 	private static extern string _helloWorld();
 	[DllImport ("__Internal")]
-	private static extern void _openOurViewController();
+	private static extern void openOurViewController();
 
 	static string HelloWorld(){
 		string str = "";
@@ -26,7 +26,7 @@ public class TestPlugin : MonoBehaviour {
 
 	static void OpenOurViewController() {
 		if(Application.platform == RuntimePlatform.IPhonePlayer){
-			_openOurViewController();
+			openOurViewController();
 		}
 	}
 
