@@ -15,6 +15,10 @@
 @implementation ViewController
 
 -(void)open:(UIViewController *)viewController {
+    UIButton* cBtn = [UIButton init];
+    cBtn.frame = CGRectMake(0, 0, 100, 100);
+    [cBtn setTitle:@"botao" forState:UIControlStateNormal];
+    [self.view addSubview:cBtn];
     [viewController presentModalViewController:self animated:YES];
 }
 
