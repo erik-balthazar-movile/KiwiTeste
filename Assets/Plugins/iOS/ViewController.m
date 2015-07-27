@@ -21,6 +21,7 @@
     [self.view addSubview:_txtText];
     [self.view addSubview:_lblLabel];
     [self.view addSubview:_btnChangeText];
+    self.view.backgroundColor = [UIColor blueColor];
     [viewController presentModalViewController:self animated:YES];
 }
 
