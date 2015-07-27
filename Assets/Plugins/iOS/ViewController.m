@@ -15,12 +15,18 @@
 @implementation ViewController
 
 -(void)open:(UIViewController *)viewController {
-    _txtText = [[UITextField alloc] init];
-    _lblLabel = [[UILabel alloc] init];
-    _btnChangeText = [[UIButton alloc] init];
-    [self.view addSubview:_txtText];
-    [self.view addSubview:_lblLabel];
-    [self.view addSubview:_btnChangeText];
+    // Create Label
+    UILabel *myLabel = [[UILabel alloc]initWithFrame:CGRectMake(10, 50, 200, 40)];
+    [myLabel setBackgroundColor:[UIColor clearColor]];
+    [myLabel setText:@"Hi Label"];
+    [[self view] addSubview:myLabel];
+    
+    // Create Text Field
+    UITextField *myTextField = [[UITextField alloc] initWithFrame:CGRectMake(10, 100, 200, 40)];
+    [myTextField setBackgroundColor:[UIColor clearColor]];
+    [myTextField setText:@"Hi Text Field"];
+    [[self view] addSubview:myTextField];
+    
     self.view.backgroundColor = [UIColor blueColor];
     [viewController presentModalViewController:self animated:YES];
 }
