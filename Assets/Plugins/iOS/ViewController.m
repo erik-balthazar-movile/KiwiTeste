@@ -35,11 +35,15 @@
     table.dataSource = self;
     [table registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
     [table reloadData];
+    [table setBackgroundColor:[UIColor whiteColor]];
+    [[self view] addSubview:table];
     
     // Create close button
     UIButton* btnClose = [[UIButton alloc] initWithFrame:CGRectMake(10, 130, 100, 100)];
     [btnClose setTitle:@"Close" forState:UIControlStateNormal];
     [btnClose addTarget:self action:@selector(closeButtonPressed) forControlEvents:UIControlEventTouchDown];
+    [btnClose setBackgroundColor:[UIColor blackColor]];
+    [[self view] addSubview:btnClose];
     
     self.view.backgroundColor = [UIColor grayColor];
     [viewController presentModalViewController:self animated:YES];
