@@ -16,19 +16,43 @@
 
 -(void)open:(UIViewController *)viewController {
     // Create Label
-    UILabel *myLabel = [[UILabel alloc]initWithFrame:CGRectMake(10, 50, 200, 40)];
+    UILabel *myLabel = [[UILabel alloc]initWithFrame:CGRectMake(30, 50, 300, 60)];
     [myLabel setBackgroundColor:[UIColor clearColor]];
     [myLabel setText:@"Hi Label"];
     [[self view] addSubview:myLabel];
     
     // Create Text Field
     UITextField *myTextField = [[UITextField alloc] initWithFrame:CGRectMake(10, 100, 200, 40)];
-    [myTextField setBackgroundColor:[UIColor clearColor]];
+    [myTextField setBackgroundColor:[UIColor whiteColor]];
     [myTextField setText:@"Hi Text Field"];
     [[self view] addSubview:myTextField];
     
-    self.view.backgroundColor = [UIColor blueColor];
+    // Create Table View
+    UITableView* table = [[UITableView alloc] initWithFrame:CGRectMake(100, 20, 100, 200)];
+    table.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+    table.delegate = self;
+    table.dataSource = self;
+    self.view.backgroundColor = [UIColor grayColor];
     [viewController presentModalViewController:self animated:YES];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"Cell";
+    UITableViewCell *cell = [table dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath] ;
+    
+    if (cell == nil)
+    {
+        
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+    cell.textLabel.text= @"Celula";
+    return cell;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 1;
 }
 
 - (void)viewDidLoad {
