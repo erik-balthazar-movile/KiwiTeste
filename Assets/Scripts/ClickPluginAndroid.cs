@@ -13,9 +13,11 @@ public class ClickPluginAndroid : MonoBehaviour {
 		currentAct.Call("runOnUIThread",new AndroidJavaRunnable(()=> {
 			currentAct.Call ("shareText", "Titulo", "Corpo");}));
 			*/
+	#if UNITY_ANDROID 
 		AndroidJavaClass unity = new AndroidJavaClass ("com.unity3d.player.UnityPlayer");
 		AndroidJavaObject currentAct = unity.GetStatic<AndroidJavaObject> ("currentActivity");
 		textField.text = currentAct.Call<string> ("DoIt");
 		currentAct.Call ("shareText", "Palmeiras", "Campeao");
+	#endif
 	}
 }

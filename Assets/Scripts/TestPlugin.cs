@@ -7,6 +7,8 @@ public class TestPlugin : MonoBehaviour {
 
 	[DllImport ("__Internal")]
 	private static extern string _helloWorld();
+	[DllImport ("__Internal")]
+	private static extern void _openOurViewController();
 
 	static string HelloWorld(){
 		string str = "";
@@ -20,5 +22,15 @@ public class TestPlugin : MonoBehaviour {
 
 	public void GetHelloWorld(){
 		gameObject.GetComponent<Text>().text = HelloWorld();
+	}
+
+	static void OpenOurViewController() {
+		if(Application.platform == RuntimePlatform.IPhonePlayer){
+			_openOurViewController();
+		}
+	}
+
+	public void OpenView() {
+		OpenOurViewController ();
 	}
 }
