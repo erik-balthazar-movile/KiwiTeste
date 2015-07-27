@@ -35,8 +35,23 @@
     table.dataSource = self;
     [table registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
     [table reloadData];
+    
+    // Create close button
+    UIButton* btnClose = [[UIButton alloc] initWithFrame:CGRectMake(10, 130, 100, 100)];
+    [btnClose setTitle:@"Close" forState:UIControlStateNormal];
+    [btnClose addTarget:self action:@selector(closeButtonPressed) forControlEvents:UIControlEventTouchDown];
+    
     self.view.backgroundColor = [UIColor grayColor];
     [viewController presentModalViewController:self animated:YES];
+}
+
+- (void)closeButtonPressed {
+    
+    //[self.view removeFromSuperview];
+    if ([self respondsToSelector:@selector(presentingViewController)])
+        [[self presentingViewController] dismissModalViewControllerAnimated:YES];
+    else
+        [[self parentViewController] dismissModalViewControllerAnimated:YES];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
