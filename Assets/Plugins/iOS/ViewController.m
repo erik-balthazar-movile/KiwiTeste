@@ -18,6 +18,9 @@
     _txtText = [[UITextField alloc] init];
     _lblLabel = [[UILabel alloc] init];
     _btnChangeText = [[UIButton alloc] init];
+    [self.view addSubview:_txtText];
+    [self.view addSubview:_lblLabel];
+    [self.view addSubview:_btnChangeText];
     [viewController presentModalViewController:self animated:YES];
 }
 
