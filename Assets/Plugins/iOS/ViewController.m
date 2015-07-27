@@ -8,8 +8,9 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
-
+@interface ViewController () {
+    UITableView *table;
+}
 @end
 
 @implementation ViewController
@@ -28,7 +29,7 @@
     [[self view] addSubview:myTextField];
     
     // Create Table View
-    UITableView* table = [[UITableView alloc] initWithFrame:CGRectMake(100, 20, 100, 200)];
+    table = [[UITableView alloc] initWithFrame:CGRectMake(100, 20, 100, 200)];
     table.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
     table.delegate = self;
     table.dataSource = self;
