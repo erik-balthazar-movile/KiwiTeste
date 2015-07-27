@@ -12,9 +12,6 @@
 @property (strong, nonatomic) IBOutlet UITextField *txtText;
 @property (strong, nonatomic) IBOutlet UILabel *lblLabel;
 @property (strong, nonatomic) IBOutlet UIButton *btnChangeText;
-@property (strong, nonatomic) IBOutlet UIButton *btnChangeView;
-
-@property (weak, nonatomic) IBOutlet UIButton* cBtn;
 
 - (void)open:(UIViewController *)viewController;
 - (IBAction)onClick:(id)sender;

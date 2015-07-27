@@ -15,9 +15,9 @@
 @implementation ViewController
 
 -(void)open:(UIViewController *)viewController {
-    _cBtn.frame = CGRectMake(0, 0, 100, 100);
-    [_cBtn setTitle:@"botao" forState:UIControlStateNormal];
-    [self.view addSubview:_cBtn];
+    _txtText = [[UITextField alloc] init];
+    _lblLabel = [[UILabel alloc] init];
+    _btnChangeText = [[UIButton alloc] init];
     [viewController presentModalViewController:self animated:YES];
 }
 
