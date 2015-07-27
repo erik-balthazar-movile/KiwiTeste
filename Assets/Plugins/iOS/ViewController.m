@@ -32,6 +32,8 @@
     table.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
     table.delegate = self;
     table.dataSource = self;
+    [table registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
+    [table reloadData];
     self.view.backgroundColor = [UIColor grayColor];
     [viewController presentModalViewController:self animated:YES];
 }
