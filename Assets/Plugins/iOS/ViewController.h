@@ -8,12 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController<UITableViewDataSource,UITableViewDelegate> 
-@property (strong, nonatomic) IBOutlet UITextField *txtText;
-@property (strong, nonatomic) IBOutlet UILabel *lblLabel;
-@property (strong, nonatomic) IBOutlet UIButton *btnChangeText;
+@interface ViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+
 - (void)open:(UIViewController *)viewController;
-- (IBAction)onClick:(id)sender;
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration;
 
 @end
 

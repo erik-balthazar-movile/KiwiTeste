@@ -9,7 +9,10 @@
 #import "ViewController.h"
 
 @interface ViewController () {
-    UITableView *table;
+    UILabel* myLabel;
+    UITextField *myTextField;
+    UIButton* btnClose;
+    UITableView* table;
 }
 @end
 
@@ -17,13 +20,13 @@
 
 -(void)open:(UIViewController *)viewController {
     // Create Label
-    UILabel *myLabel = [[UILabel alloc]initWithFrame:CGRectMake(30, 50, 300, 60)];
+    myLabel = [[UILabel alloc]initWithFrame:CGRectMake(30, 50, 300, 60)];
     [myLabel setBackgroundColor:[UIColor clearColor]];
     [myLabel setText:@"Hi Label"];
     [[self view] addSubview:myLabel];
     
     // Create Text Field
-    UITextField *myTextField = [[UITextField alloc] initWithFrame:CGRectMake(10, 100, 200, 40)];
+    myTextField = [[UITextField alloc] initWithFrame:CGRectMake(10, 100, 200, 40)];
     [myTextField setBackgroundColor:[UIColor whiteColor]];
     [myTextField setText:@"Hi Text Field"];
     [[self view] addSubview:myTextField];
@@ -39,7 +42,7 @@
     [[self view] addSubview:table];
     
     // Create close button
-    UIButton* btnClose = [[UIButton alloc] initWithFrame:CGRectMake(10, 130, 100, 100)];
+    btnClose = [[UIButton alloc] initWithFrame:CGRectMake(10, 130, 100, 100)];
     [btnClose setTitle:@"Close" forState:UIControlStateNormal];
     [btnClose addTarget:self action:@selector(closeButtonPressed) forControlEvents:UIControlEventTouchDown];
     [btnClose setBackgroundColor:[UIColor blackColor]];
@@ -72,9 +75,22 @@
     return cell;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 1;
+}
+
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
+     if (UIInterfaceOrientationIsLandscape(toInterfaceOrientation)) {
+         myLabel.frame = CGRectMake(30, 50, 300, 60);
+         myTextField.frame = CGRectMake(20, 100, 200, 40);
+         table.frame = CGRectMake(100, 60, 100, 200);
+         btnClose.frame = CGRectMake(50, 50, 100, 100);
+     } else {
+         myLabel.frame = CGRectMake(30, 50, 300, 60);
+         myTextField.frame = CGRectMake(10, 100, 200, 40);
+         table.frame = CGRectMake(100, 20, 100, 200);
+         btnClose.frame = CGRectMake(10, 130, 100, 100);
+     }
 }
 
 - (void)viewDidLoad {
@@ -86,7 +102,5 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (IBAction)onClick:(id)sender {
-    _lblLabel.text = _txtText.text;
-}
+
 @end
