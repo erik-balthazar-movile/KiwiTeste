@@ -7,7 +7,7 @@ public class AndroidAndiOSPlugin : MonoBehaviour {
 
 	public Text textField;
 	[DllImport ("__Internal")]
-	private static extern void openOurViewController();
+	public static extern void openOurViewController();
 
 	public void OnClick(){
 #if UNITY_IOS
@@ -16,10 +16,6 @@ public class AndroidAndiOSPlugin : MonoBehaviour {
 		}
 
 #elif UNITY_ANDROID
-		GameObject myText = new GameObject();
-		myText.AddComponent<CanvasRenderer> ();
-		myText.AddComponent<Text>();
-		myText.transform.parent = GameObject.Find("Canvas").transform;
 		AndroidJavaClass unity = new AndroidJavaClass ("com.unity3d.player.UnityPlayer");
 		AndroidJavaObject currentAct = unity.GetStatic<AndroidJavaObject> ("currentActivity");
 		textField.text = currentAct.Call<string> ("DoIt");

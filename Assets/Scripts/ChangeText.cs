@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 [RequireComponent (typeof (Text))]
 public class ChangeText : MonoBehaviour {
-
+	
 	public string Androidtext;
 	public string iOStext;
 
