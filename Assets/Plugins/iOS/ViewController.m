@@ -82,14 +82,14 @@
 - (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
      if (UIInterfaceOrientationIsLandscape(toInterfaceOrientation)) {
          myLabel.frame = CGRectMake(30, 50, 300, 60);
-         myTextField.frame = CGRectMake(20, 100, 200, 40);
-         table.frame = CGRectMake(100, 60, 100, 200);
-         btnClose.frame = CGRectMake(50, 50, 100, 100);
-     } else {
-         myLabel.frame = CGRectMake(30, 50, 300, 60);
          myTextField.frame = CGRectMake(10, 100, 200, 40);
          table.frame = CGRectMake(100, 20, 100, 200);
          btnClose.frame = CGRectMake(10, 130, 100, 100);
+     } else {
+         myLabel.frame = CGRectMake(30, 50, 300, 60);
+         myTextField.frame = CGRectMake(20, 100, 200, 40);
+         table.frame = CGRectMake(100, 60, 100, 200);
+         btnClose.frame = CGRectMake(50, 50, 100, 100);
      }
 }
 
